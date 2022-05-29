@@ -8,7 +8,7 @@
 .background{
     width: 100%;
     min-height: 100vh;
-    background-image: url('/photos/maui-ocean-copy.jpg');
+    background-image: url('https://cthyne.github.io/jacparking-website/photos/maui-ocean-copy.jpg');
     background-position: center;
     background-size: cover;
     /* position: absolute; */
