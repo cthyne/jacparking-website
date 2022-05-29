@@ -16,7 +16,7 @@
 
 .title-container{
     width: 100%;
-    padding-top: 40rem;
+    padding-top: 35rem;
     /* padding-bottom: 20rem; */
     color: #fff;
     display: flex;
@@ -36,10 +36,9 @@
     font-size: 1rem;
 }
 
-.nav-bar {
+.nav-bar{
     width: 100%;
 }
-
 .nav-link {
     font-family: "Big Shot";
     font-size: 1rem;
