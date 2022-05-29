@@ -81,7 +81,7 @@
                     ></textarea>
                     <label for="form-message"><i class="fas fa-comments"></i>Your message</label>
                 </div>
-                <input type="button" value="Submit" onclick="sendEmail();">
+                <input type="button" value="Submit">
                 <!-- <button><i class="fas fa-paper-plane"></i>Submit</button> -->
             </form>
         </div>
@@ -90,7 +90,7 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
     // Set a cross-site cookie for third-party contexts
-    // document.cookie = 'cookie2=value2; SameSite=None; Secure';
+    document.cookie = 'cookie2=value2; SameSite=None; Secure';
 
         function sendEmail(){
         Email.send({
