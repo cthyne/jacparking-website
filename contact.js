@@ -13,16 +13,16 @@
 
   
 
-// function sendEmail(){
-//     Email.send({
-//         Host : "smtp.mailtrap.io",
-//         Username : "388677995ecedb",
-//         Password : "e9503d9762b3e9",
-//         To : 'them@website.com',
-//         From : "you@isp.com",
-//         Subject : "This is the subject",
-//         Body : "And this is the body"
-//     }).then(
-//       message => alert(message)
-//     );
-// }
+function sendEmail(){
+    Email.send({
+        Host : "smtp.mailtrap.io",
+        Username : "388677995ecedb",
+        Password : "e9503d9762b3e9",
+        To : 'them@website.com',
+        From : "you@isp.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+}
