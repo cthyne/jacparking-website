@@ -1,0 +1,22 @@
+{
+  "name": "jacparking-website",
+  "version": "1.0.0",
+  "description": "website for parking lot in Lahaina,HI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "parking",
+    "lahaina",
+    "parking",
+    "in",
+    "lahaina",
+    "paid",
+    "parking",
+    "parking",
+    "lot"
+  ],
+  "author": "Ciara Thyne",
+  "license": "ISC"
+}

@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0; 
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.background{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/photos/dark-monstera-banner.jpg');
+    background-position: center;
+    background-size: cover;
+    /* position: absolute; */
+}
+
+.title-page h1 {
+    font-family:'Bigshot One';
+    color: #fff;
+    font-size: 4rem;
+    padding: 55px 0 15px 0;
+    text-align: center;
+}
+
+/* Card for locations */
+
+.card-img {
+    height: auto;
+    width:100%;
+}
+
+.card-container {
+    /* width: 100%; */
+    /* height: auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.card-block {
+    width:100%;
+    height:auto;
+}
+
+/* .card-block-left {
+    min-height:75%;
+    max-width:80%;
+ } */
+ 
+ .card-block-right {
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    text-align:center;
+    flex-wrap: wrap;
+    background: linear-gradient(#15171774, #132020);
+    color: white;
+    font-family: 'Prata';
+    padding-bottom: 15px;
+ }
+
+ .card-block-right ul{
+    list-style: none;
+ }
+
+
+a:hover { 
+    border-bottom:1px solid; 
+}
+
+.nav-bar{
+    width: 100%;
+    background: linear-gradient(#14212100, #132020);
+}
+.nav-link {
+    font-family: "Big Shot";
+    font-size: 1rem;
+    color:white;
+}
+
+.img-thumbnail {
+    background-color: transparent;
+    border-color: transparent;
+    height: 100px;
+    justify-content: flex-end;
+}   
+
+/* FOOTER */
+footer {
+    background-color: #132020;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+.contact-info{
+    background-color: #132020;
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    text-align: center;
+}
+
+.address {
+    padding: 5px 10px 0 10px;
+    width: 40%;
+}
+
+.contact{
+    padding: 5px 10px 0 10px;
+    width: 40%;
+}
+
+.logo {
+    padding: 0 0 0 10px;
+    width: 20%;
+}
+
+
+@media (min-width: 700px) {
+
+    .title-page h1 {
+        font-size: 4rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .nav-link {
+        font-size: 2.5rem;
+        padding: 0px 50px 0px 50px;
+    }
+
+/* Card for locations */
+    .card-img {
+        height: 100%;
+        width:100%;
+    }
+    .card-container {
+        width: 65%;
+        margin-left: 20%;
+        justify-content: center;
+    }
+
+    .card-block {
+        display:flex;
+        width:100%;
+        height:85%;
+        max-height:75%;
+    }
+
+    .card-block-left {
+        flex:0 1 50%;
+        min-height:75%;
+        max-width:80%;
+     }
+     
+     .card-block-right {
+        flex:0 1 50%;
+        display:flex;
+        min-height:75%;
+        max-width:80%;
+        flex-direction: column;
+        text-align:center;
+        flex-wrap: wrap;
+     }
+
+     .card-block-right h1, h5{
+        color: white;
+    }
+
+    .card-block-right h1 {
+        font-size: 3rem;
+    }
+
+    .card-block-right h5{
+        font-size: 2rem;
+    }
+
+    .card-block-right ul {
+        font-size: 1rem;
+    }
+
+
+/* Footer */
+    .contact-info { 
+        width:100%;  
+    }
+
+    .address, 
+    .contact {
+        text-align: center;
+    }
+
+    .logo {
+        text-align:right;
+    }
+}

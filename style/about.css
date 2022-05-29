@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0; 
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.title-page h1{
+    font-family:'Impact';
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.title-page h3{
+    font-family: 'Great Vibes';
+}
+
+.background{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/photos/dark-monstera-banner.jpg');
+    background-position: center;
+    background-size: cover;
+    /* position: absolute; */
+}
+
+a:hover { 
+    border-bottom: 1px solid gray; 
+    border-bottom: 44px;
+}
+
+.nav-bar {
+    width: 100%;
+    background: linear-gradient(#14212100, #132020);
+}
+.nav-link {
+    font-family: "Big Shot";
+    font-size: 1rem;
+    color:white;
+}
+
+.img-thumbnail {
+    background-color: transparent;
+    border-color: transparent;
+    height: 100px;
+    justify-content: flex-end;
+}   
+
+/* FOOTER */
+footer {
+    background-color: #132020;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+.contact-info{
+    background-color: #132020;
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    text-align: center;
+}
+
+.address {
+    padding: 5px 10px 0 10px;
+    width: 40%;
+}
+
+.contact{
+    padding: 5px 10px 0 10px;
+    width: 40%;
+}
+
+.logo {
+    padding: 0 0 0 10px;
+    width: 20%;
+}
+
+.about-container{
+    color: #fff;
+    width: 100%;
+    padding: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.title-page{
+    color:#fff;
+    margin-top: 35px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+@media (min-width: 700px) {
+    .nav-link {
+        font-size: 2.5rem;
+        padding: 0px 50px 0px 50px;
+    }
+
+    .about-container{
+        width: 90%;
+        font-size: 1.5rem;
+        padding-bottom: 55px;
+        background: linear-gradient(#15171774, #132020);
+    }
+
+    /* Footer */
+    .contact-info { 
+        width:100%;  
+    }
+
+    .address, 
+    .contact {
+        text-align: center;
+    }
+
+    .logo {
+        text-align:right;
+    }
+}
