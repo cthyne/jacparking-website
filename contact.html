@@ -81,7 +81,7 @@
                     ></textarea>
                     <label for="form-message"><i class="fas fa-comments"></i>Your message</label>
                 </div>
-                <input type="button" value="Submit" onclick="sendEmail(); reset()">
+                <input type="button" value="Submit" onclick="sendEmail();">
                 <!-- <button><i class="fas fa-paper-plane"></i>Submit</button> -->
             </form>
         </div>
@@ -91,10 +91,10 @@
     <script>
         function sendEmail(){
         Email.send({
-            Host : "smtp.gmail.com",
-            Username : "ciara.thyne@gmail.com",
-            Password : "Jesusgirl10!",
-            To : "ciara.thyne@gmail.com",
+            Host : "smtp.mailtrip.io",
+            Username : "388677995ecedb",
+            Password : "e9503d9762b3e9",
+            To : "yxz@qm.com",
             From : document.getElementById("email").value,
             Subject : "New Contact Form Enquiry",
             Body : "Name: " + document.getElementById("name").value 
