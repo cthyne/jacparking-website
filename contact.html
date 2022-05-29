@@ -89,6 +89,8 @@
     <!-- Connecting JS to contact page -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
+        // Set a cross-site cookie for third-party contexts
+        document.cookie = 'cookie2=value2; SameSite=None; Secure';
         function sendEmail(){
         Email.send({
             Host : "smtp.mailtrip.io",
