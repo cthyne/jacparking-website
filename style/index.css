@@ -94,11 +94,12 @@ footer {
 @media (min-width: 700px) {
     .nav-link {
         font-size: 2.5rem;
-        padding: 0px 50px 0px 50px;
+        padding: 0px 25px 0px 25px;
     }
 
     .title-container{
         padding-top: 20rem;
+        padding-bottom: 20rem;
     }
 
     .title-container h1{
