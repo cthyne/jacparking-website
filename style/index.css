@@ -28,12 +28,12 @@
 
 .title-container h1{
     font-family: 'Impact';
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .title-container h3{
     font-family: 'Dancing Script';
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .nav-bar{
@@ -103,7 +103,7 @@ footer {
     }
 
     .title-container h1{
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: 'Impact';
         font-size: 6.5rem;
     }
     
