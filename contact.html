@@ -96,19 +96,21 @@
 // const inputs = document.querySelector('form')
     btn.addEventListener('click', (event) => {
         event.preventDefault()
-        Email.send({
-            Host : "smtp.gmail.com.io",
-            Username : "ciara.thyne@gmail.com",
-            Password : "Jesusgirl10!",
-            To : "ciara.thyne@gmail.com.com",
-            From : document.getElementById("email").value,
-            Subject : "New Contact Form Enquiry",
-            Body : "Name: " + document.getElementById("name").value 
-                + "<br> Email: " + document.getElementById("email").valuu
-        }).then(
-            msg => alert("Message Sent Successfully!")
-            );
-        })
+        console.log('hi')
+    })
+        // Email.send({
+        //     Host : "smtp.gmail.com.io",
+        //     Username : "ciara.thyne@gmail.com",
+        //     Password : "Jesusgirl10!",
+        //     To : "ciara.thyne@gmail.com.com",
+        //     From : document.getElementById("email").value,
+        //     Subject : "New Contact Form Enquiry",
+        //     Body : "Name: " + document.getElementById("name").value 
+        //         + "<br> Email: " + document.getElementById("email").valuu
+        // }).then(
+        //     msg => alert("Message Sent Successfully!")
+        //     );
+        // })
     </script>
 </body>
     <footer>
