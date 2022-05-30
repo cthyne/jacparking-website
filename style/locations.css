@@ -92,6 +92,10 @@ footer {
     background-color: #132020;
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 10px;
   }
 
 .contact-info{
@@ -116,7 +120,6 @@ footer {
     padding: 0 0 0 10px;
     width: 20%;
 }
-
 
 @media (min-width: 700px) {
 
@@ -182,9 +185,9 @@ footer {
     }
 
 
-/* Footer */
+    /* Footer */
     .contact-info { 
-        width:100%;  
+        width:100%;
     }
 
     .address, 
