@@ -18,7 +18,7 @@
     color: #fff;
     font-family:'Bigshot One';
     font-size: 3rem;
-    padding: 45px 0 45px 0;
+    padding: 45px 0 15px 0;
     text-align: center;
 }
 
@@ -36,7 +36,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 15px;
+    padding-bottom: 125px;
+
 }
 
 .card-block {
@@ -58,16 +59,16 @@
     background: linear-gradient(#15171774, #132020);
     color: white;
     font-family: 'Prata';
-    padding-bottom: 15px;
+    /* padding-bottom: 25px; */
  }
 
  .card-block-right ul{
     list-style: none;
  }
 
- .card-footer{
+ /* .card-footer{
     margin-bottom: 105px;
- }
+ } */
 
 
 a:hover { 
