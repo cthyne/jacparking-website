@@ -92,21 +92,23 @@
     // Set a cross-site cookie for third-party contexts
     document.cookie = 'cookie2=value2; SameSite=None; Secure';
 
-        function sendEmail(){
+    const btn = document.querySelector('button')
+// const inputs = document.querySelector('form')
+    btn.addEventListener('click', (event) => {
+        event.preventDefault()
         Email.send({
-            Host : "smtp.mailtrip.io",
-            Username : "388677995ecedb",
-            Password : "e9503d9762b3e9",
-            To : "yxz@qm.com",
+            Host : "smtp.gmail.com.io",
+            Username : "ciara.thyne@gmail.com",
+            Password : "Jesusgirl10!",
+            To : "ciara.thyne@gmail.com.com",
             From : document.getElementById("email").value,
             Subject : "New Contact Form Enquiry",
             Body : "Name: " + document.getElementById("name").value 
-                + "<br> Email: " + document.getElementById("email").value
-
+                + "<br> Email: " + document.getElementById("email").valuu
         }).then(
             msg => alert("Message Sent Successfully!")
             );
-        }
+        })
     </script>
 </body>
     <footer>
