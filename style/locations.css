@@ -17,8 +17,8 @@
 .title-page h1 {
     font-family:'Bigshot One';
     color: #fff;
-    font-size: 4rem;
-    padding: 55px 0 15px 0;
+    font-size: 3rem;
+    padding: 45px 0 15px 0;
     text-align: center;
 }
 
@@ -63,6 +63,10 @@
 
  .card-block-right ul{
     list-style: none;
+ }
+
+ .card-footer{
+     padding-bottom: 35px;
  }
 
 
