@@ -81,7 +81,7 @@
                     ></textarea>
                     <label for="form-message"><i class="fas fa-comments"></i>Your message</label>
                 </div>
-                <input type="button" value="Submit">
+                <button id="button" value="Submit"></button>
                 <!-- <button><i class="fas fa-paper-plane"></i>Submit</button> -->
             </form>
         </div>
@@ -94,8 +94,8 @@
 
     const btn = document.querySelector('button')
 // const inputs = document.querySelector('form')
-    btn.addEventListener('click', (event) => {
-        event.preventDefault()
+    btn.addEventListener('click', function(e) {
+        e.preventDefault()
         console.log('hi')
     })
         // Email.send({
