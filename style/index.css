@@ -57,7 +57,7 @@ a:hover {
 .img-thumbnail {
     background-color: transparent;
     border-color: transparent;
-    height: 100px;
+    height: 70px;
     justify-content: flex-end;
 }   
 
@@ -66,7 +66,7 @@ footer {
     background-color: #132020;
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
     font-size: 10px;
@@ -94,6 +94,7 @@ footer {
     padding: 0 0 0 10px;
     width: 20%;
 }
+
 
 @media (min-width: 700px) {
     .nav-link {
@@ -123,6 +124,7 @@ footer {
     /* Footer */
     .contact-info { 
         width:100%;
+        bottom:0;
     }
 
     .address, 

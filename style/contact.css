@@ -36,7 +36,7 @@
 form {
     width: 90%; 
     max-width: 700px;
-    margin-bottom: 35px;
+    /* margin-bottom: 35px; */
 }
 
 .input-group{

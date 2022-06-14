@@ -41,7 +41,7 @@
             <h1>Get In Touch</h1>
         </div>
         <div class="contact-container">
-            <form onsubmit = "sendEmail(); reset();">
+            <form action="http://www.jacmgmthi.com/contact" method="POST">
                 <div class="input-group">
                     <input 
                         id="name" 
@@ -81,8 +81,8 @@
                     ></textarea>
                     <label for="form-message"><i class="fas fa-comments"></i>Your message</label>
                 </div>
-                <button id="button">Submit</button>
-                <!-- <button><i class="fas fa-paper-plane"></i>Submit</button> -->
+                <!-- <button id="button">Submit</button> -->
+                <button><i class="fas fa-paper-plane"></i>Submit</button>
             </form>
         </div>
     </div>
@@ -90,25 +90,7 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
     // Set a cross-site cookie for third-party contexts
-    document.cookie = 'cookie2=value2; SameSite=None; Secure';
-
-    const btn = document.querySelector('button')
-// const inputs = document.querySelector('form')
-    btn.addEventListener('click', function(e) {
-        e.preventDefault()
-        Email.send({
-            Host : "smtp.gmail.com.io",
-            Username : "ciara.thyne@gmail.com",
-            Password : "Jesusgirl10!",
-            To : "ciara.thyne@gmail.com.com",
-            From : document.getElementById("email").value,
-            Subject : "New Contact Form Enquiry",
-            Body : "Name: " + document.getElementById("name").value 
-                + "<br> Email: " + document.getElementById("email").valuu
-        }).then(
-            msg => alert("Message Sent Successfully!")
-            );
-        })
+    document.cookie = 'cookie2=value2; SameSite=None; Secure'
     </script>
 </body>
     <footer>
