@@ -1,28 +1,34 @@
-// const btn = document.querySelector('button')
-// const inputs = document.querySelector('form')
-// btn.addEventListener('click', () => {
+// window.onload=function(){
 
-    // const name = (inputs.elements["name"].value).trim()
-    // const email = (inputs.elements["email"].value).trim()
-    // const msg = (inputs.elements["message"].value.trim())
-    // const phone = (inputs.elements["phone"].value).trim()
-    // if (!name.length > 0 || !email.length > 0 || !msg.length > 0 || !phone.length > 0) {
-    //     alert("All fields are mandatory")
-    //     return
-    // }
+//     const submitHandler = (event) => {
+//         event.preventDefault();
+//         // Get the name input
+//         const inputName = document.querySelector("#input-group").value;
 
-  
+//         console.log(inputName);
+//         console.log("The form was submitted");
+//       };
 
-// function sendEmail(){
-//     Email.send({
-//         Host : "smtp.mailtrap.io",
-//         Username : "388677995ecedb",
-//         Password : "e9503d9762b3e9",
-//         To : 'them@website.com',
-//         From : "you@isp.com",
-//         Subject : "This is the subject",
-//         Body : "And this is the body"
-//     }).then(
-//       message => alert(message)
-//     );
+//       const main = () => {
+//         // Get the form element
+//         const form = document.querySelector("#form");
+      
+//         // Attach the submit handler
+//         form.addEventListener("submit", submitHandler);
+//       };
+
+    // // Select all the buttons
+    // const allBtns = document.querySelectorAll("button");
+
+    // // Iterate through the list of buttons and add an event handler to each
+    // allBtns.forEach((btn) => {
+    //     btn.addEventListener("click", (event) => {
+    //         console.log(event.target);
+    //     });
+    // });
+
+    // const submitHandler = (event) => {
+    //     console.log("The form was submitted");
+    //   };
+
 // }
