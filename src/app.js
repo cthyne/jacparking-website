@@ -2,37 +2,62 @@
 const express = require('express');
 // const morgan = require('morgan');
 // const {Prohairesis} = require('prohairesis');
-// const bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
 const path = require('path');
-
 const app = express();
+// const db = require('../src/db')
+const knex = require('../src/db/connection')
  
 // const contactsRouter = require('./contacts/contacts.router');
 
-app
+// app
   // .use(morgan('dev'))
-// app.use(bodyParser.urlencoded({ extended: false}))
-  // .use(bodyParser.json())
+  // .use(express.static('public'))
+app.use(bodyParser.urlencoded({ extended: true}))
+// app.use(bodyParser.json())
 
-// app.use(express.urlencoded({ extended: false }))
-  
-app.use(express.json());
+// app.use(express.json());
 
-app.use(express.urlencoded());
-
+// app.use(express.urlencoded());
 app.use(express.static('public'))
+//
+
 
 app.get('/contact', (req,res) => {
-  res.sendFile(path.resolve('./public/contact.html'))
+  res.sendFile(path.resolve(__dirname+'../../public/contact.html'));
 })
 
-app.post('/contact', (req,res) => {
-  res.json(req.body)
-  // console.log(req.body)
+app.post('/contact/form', (req, res) => {
+  // const insertData = {
+  //   fullName: req.body.fullName,
+  //   emailAddress: req.body.emailAddress,
+  //   phone: req.body.phone,
+  //   formMessage: req.body.formMessage,
+  // }
+//   const name = req.body.fullName;
+//   const email = req.body.emailAddress;
+//   const phoneNumber = req.body.phone;
+//   const form = req.body.formMessage;
+
+// if (!name) {
+//     return res.json({success: false, message: 'Name is required'});
+// }
+
+   knex('contacts').insert({
+    fullName: req.body.fullName, 
+    emailAddress: req.body.emailAddress,
+    phone: req.body.phone,
+    formMessage: req.body.formMessage
+  })
+        .then(() => {
+        return res.redirect('/thanks.html');
+  })
+    .catch((err) => {
+    console.error(err);
+    return res.json({success: false, message: 'An error occurred, please try again later.'});
+    });
 })
 
-
-// app.use('/contact', contactsRouter);
 
 // Not found handler
 app.use((req, res, next) => {

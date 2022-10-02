@@ -3,6 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA Compatible" content="IE-Edge"/>
     <meta name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
@@ -35,16 +36,16 @@
         <div class="nav-bar">
             <nav class="nav d-flex justify-content-center align-items-center">
                 <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link" href="about">About Us</a>
-                <a class="nav-link" href="locations">Locations</a>
-                <a class="nav-link" href="contact">Contact Us</a>
+                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="locations.html">Locations</a>
+                <a class="nav-link" href="contact.html">Contact Us</a>
             </nav>
         </div>
         <div class="title-page">
             <h1>Get In Touch</h1>
         </div>
         <div class="contact-container">
-            <form action="/contact/sent" method="POST"></form>
+            <form action="/contact/form" class="form" method="POST">
                 <div class="input-group">
                     <input 
                         id="fullName" 
@@ -68,6 +69,7 @@
                         id="phone"
                         type="text"
                         name="phone"
+                        placeholder="1234567890"
                         pattern="\d{3}\d{3}\d{4}"
                         required
                     />
@@ -85,14 +87,16 @@
                     <label for="form-message"><i class="fas fa-comments"></i>Your message</label>
                 </div>
                 <!-- <button id="button">Submit</button> -->
-                <button><i class="fas fa-paper-plane"></i>Submit</button>
+                <!-- <button type="submit" value="Submit"></button>-->
+                <button type="submit"><i class="fas fa-paper-plane"></i>Submit</button>
+                <button type="reset"><i class="fa fa-refresh"></i>Reset</button> 
             </form>
         </div>
     </div>
     <!-- Set a cross-site cookie for third-party contexts -->
-    <script>
+    <!-- <script>
         document.cookie = "name=cookiesetting; SameSite=None; Secure";
-    </script> 
+    </script>  -->
 </body>
     <footer>
         <div class="contact-info">
@@ -112,7 +116,7 @@
                 </p>
             </div>
             <div class="logo">
-                <img src="./photos/logo-jac-big.png" class="img-thumbnail" alt="Bird of paradise graphic">
+                <img src="../photos/logo-jac-big.png" class="img-thumbnail" alt="Bird of paradise graphic">
             </div>
         </div>
   </footer>

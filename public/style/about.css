@@ -18,15 +18,10 @@
 .background{
     width: 100%;
     min-height: 100vh;
-    background-image: url('https://cthyne.github.io/jacparking-website/photos/dark-monstera-banner.jpg');
+    background-image: url('../photos/dark-monstera-banner.jpg');
     background-position: center;
     background-size: cover;
     /* position: absolute; */
-}
-
-a:hover { 
-    border-bottom: 1px solid gray; 
-    border-bottom: 44px;
 }
 
 .nav-bar {
@@ -39,10 +34,19 @@ a:hover {
     color:white;
 }
 
+a { 
+    text-decoration: none;
+    color: white; 
+}
+
+a:hover { 
+    border-bottom:1px solid; 
+}
+
 .img-thumbnail {
     background-color: transparent;
     border-color: transparent;
-    height: 100px;
+    height: 70px;
     justify-content: flex-end;
 }   
 
@@ -51,6 +55,10 @@ footer {
     background-color: #132020;
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    font-size: 10px;
   }
 
 .contact-info{
@@ -107,6 +115,9 @@ footer {
         width: 90%;
         font-size: 1.5rem;
         padding-bottom: 55px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         background: linear-gradient(#15171774, #132020);
     }
 
