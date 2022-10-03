@@ -27,7 +27,7 @@ app.get('/contact', (req,res) => {
   res.sendFile(path.resolve(__dirname+'../../public/contact.html'));
 })
 
-app.post('/contact/form', (req, res) => {
+app.post('/contact', (req, res) => {
   // const insertData = {
   //   fullName: req.body.fullName,
   //   emailAddress: req.body.emailAddress,
