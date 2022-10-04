@@ -1,63 +1,42 @@
 // //requests express package -- exports a function and assigned to 'express' variable
+// const PORT = process.env.PORT || 3000;
 const express = require('express');
-// const morgan = require('morgan');
-// const {Prohairesis} = require('prohairesis');
 const bodyParser = require('body-parser')
 const path = require('path');
-const app = express();
-// const db = require('../src/db')
 const knex = require('../src/db/connection')
- 
-// const contactsRouter = require('./contacts/contacts.router');
+const app = express();
+app.set('port', (process.env.PORT || 3000));
 
-// app
-  // .use(morgan('dev'))
-  // .use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true}))
-// app.use(bodyParser.json())
+// 
 
-// app.use(express.json());
+app.use(express.static(__dirname+ '/../public'));
 
-// app.use(express.urlencoded());
-app.use(express.static('public'))
-//
+// app.use('/', express.static(path.join(__dirname, '../public')))
 
-
-app.get('/contact', (req,res) => {
-  res.sendFile(path.resolve(__dirname+'../../public/contact.html'));
+app.get('/home', (req, res) => {
+  res.sendFile(path.resolve(__dirname+'/../public/index.html'));
 })
 
-app.post('/contact', (req, res) => {
-  // const insertData = {
-  //   fullName: req.body.fullName,
-  //   emailAddress: req.body.emailAddress,
-  //   phone: req.body.phone,
-  //   formMessage: req.body.formMessage,
-  // }
-//   const name = req.body.fullName;
-//   const email = req.body.emailAddress;
-//   const phoneNumber = req.body.phone;
-//   const form = req.body.formMessage;
+app.get('/contact', (req,res) => {
+  res.sendFile(path.resolve(__dirname+'/../public/contact.html'));
+})
 
-// if (!name) {
-//     return res.json({success: false, message: 'Name is required'});
-// }
-
+app.post('/contact/form', (req, res) => {
    knex('contacts').insert({
     fullName: req.body.fullName, 
     emailAddress: req.body.emailAddress,
     phone: req.body.phone,
     formMessage: req.body.formMessage
   })
-        .then(() => {
-        return res.redirect('/thanks.html');
+    .then(() => {
+    return res.redirect('/thanks.html');
   })
     .catch((err) => {
     console.error(err);
     return res.json({success: false, message: 'An error occurred, please try again later.'});
     });
 })
-
 
 // Not found handler
 app.use((req, res, next) => {
