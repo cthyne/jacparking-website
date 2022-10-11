@@ -45,26 +45,26 @@
             <h1>Get In Touch</h1>
         </div>
         <div class="contact-container">
-            <form action="/contact/form" class="form" method="POST">
+            <form action="https://p3o834nmn4.execute-api.us-west-2.amazonaws.com/dev/email/send/json" method="POST">
                 <div class="input-group">
                     <input 
-                        id="fullName" 
+                        id="name" 
                         type="text" 
-                        name="fullName" 
+                        name="name" 
                         required
                     />
                     <label for="name"><i class="fas fa-user"></i>Your Name</label>
                 </div>
                 <div class="input-group">
                     <input 
-                        id="emailAddress" 
+                        id="email" 
                         type="text" 
-                        name="emailAddress" 
+                        name="email" 
                         required
                     />
                     <label for="email"><i class="fas fa-envelope"></i>Email</label>
                 </div>
-                <div class="input-group">
+                <!-- <div class="input-group">
                     <input
                         id="phone"
                         type="text"
@@ -75,11 +75,11 @@
                     />
                     <label for="phone"> 
                         <i class="fas fa-phone-square-alt"></i>Phone</label>
-                </div>
+                </div> -->
                 <div class="input-group">
                     <textarea
-                    id="formMessage"
-                    name="formMessage"
+                    id="content"
+                    name="content"
                     rows="5"
                     required
                     maxlength="200"
