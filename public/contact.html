@@ -17,6 +17,7 @@
     <!-- Connecting to JS -->
     <!-- <script src="../src/app.js"></script> -->
     
+
     <!-- Imported thumbnails for input groups -->
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 
@@ -45,8 +46,19 @@
             <h1>Get In Touch</h1>
         </div>
         <div class="contact-container">
-            <form action="https://p3o834nmn4.execute-api.us-west-2.amazonaws.com/dev/email/send/json" method="POST">
-                <div class="input-group">
+            <form>
+                <label for="name">Name:</label>
+                <input name="name" type="text"/><br/><br/>
+                <label for="email">Email:</label>
+                <input name="email" type="email"/><br/><br/>
+                <label for="name">Message:</label>
+                <textarea name="message"></textarea><br/><br/>
+                <input type="submit"/>
+                <div>
+                    <p id="result-text"></p>
+                </div>
+                
+                <!-- <div class="input-group">
                     <input 
                         id="name" 
                         type="text" 
@@ -63,7 +75,7 @@
                         required
                     />
                     <label for="email"><i class="fas fa-envelope"></i>Email</label>
-                </div>
+                </div> -->
                 <!-- <div class="input-group">
                     <input
                         id="phone"
@@ -76,20 +88,22 @@
                     <label for="phone"> 
                         <i class="fas fa-phone-square-alt"></i>Phone</label>
                 </div> -->
-                <div class="input-group">
+                <!-- <div class="input-group">
                     <textarea
-                    id="content"
-                    name="content"
+                    id="message"
+                    name="message"
                     rows="5"
                     required
                     maxlength="200"
                     ></textarea>
-                    <label for="form-message"><i class="fas fa-comments"></i>Your message</label>
+                    <label for="message"><i class="fas fa-comments"></i>Your message</label>
                 </div>
-                <!-- <button id="button">Submit</button> -->
-                <!-- <button type="submit" value="Submit"></button>-->
                 <button type="submit"><i class="fas fa-paper-plane"></i>Submit</button>
-                <button type="reset"><i class="fa fa-refresh"></i>Reset</button> 
+                <div>
+                    <p id="result-text"></p>
+                  </div>
+                <button type="reset"><i class="fa fa-refresh"></i>Reset</button>  -->
+
             </form>
         </div>
     </div>
@@ -97,7 +111,45 @@
     <!-- <script>
         document.cookie = "name=cookiesetting; SameSite=None; Secure";
     </script>  -->
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener("submit", (event) => {
+        // prevent the form submit from refreshing the page
+        event.preventDefault();
+    
+        const { name, email, message } = event.target;
+    
+            // Use your API endpoint URL you copied from the previous step
+        const endpoint =
+            "https://21r8ofbihc.execute-api.us-west-2.amazonaws.com/default/emailSender";
+        // We use JSON.stringify here so the data can be sent as a string via HTTP
+            const body = JSON.stringify({
+            senderName: name.value,
+            senderEmail: email.value,
+            message: message.value
+        });
+        const requestOptions = {
+            method: "POST",
+            body
+        };
+    
+        fetch(endpoint, requestOptions)
+            .then((response) => {
+            if (!response.ok) throw new Error("Error in fetch");
+            return response.json();
+            })
+            .then((response) => {
+            document.getElementById("result-text").innerText =
+                "Email sent successfully!";
+            })
+            .catch((error) => {
+            document.getElementById("result-text").innerText =
+                "An unkown error occured.";
+            });
+        });
+    </script>
 </body>
+
     <footer>
         <div class="contact-info">
             <div class ="address">
