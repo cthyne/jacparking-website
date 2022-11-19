@@ -135,8 +135,8 @@
     
         fetch(endpoint, requestOptions)
             .then((response) => {
-            if (!response.ok) throw new Error("Error in fetch");
-            return response.text();
+            if (!response) throw new Error("Error in fetch");
+            return response.json();
             })
             .then((response) => {
             document.getElementById("result-text").innerText =
