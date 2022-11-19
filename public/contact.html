@@ -134,11 +134,10 @@
                 return response.json();
                 })
                 .then((response) => {
-                console.log(response)
                 document.getElementById("result-text").innerText =
                     "Email sent successfully!";
                 })
-                .then((json) => {
+                .then(() => {
                 // do stuff with `json` body
                  window.location.replace("https://www.jacmgmthi.com/public/thanks.html")
                 })
