@@ -136,12 +136,12 @@
                 .then((response) => {
                 document.getElementById("result-text").innerText =
                     "Email sent successfully!";
+                    window.location.replace('https://www.jacmgmthi.com/public/thanks.html')
                 })
                 .catch((error) => {
                 document.getElementById("result-text").innerText =
                     "An unkown error occured.";
-                });
-                window.location.replace('https://www.jacmgmthi.com/public/thanks.html')
+                })
             });
         </script>
     </div>
