@@ -109,7 +109,6 @@
         <script>
             const form = document.querySelector("form");
             form.addEventListener("submit", (event) => {
-            window.location.replace('https://www.jacmgmthi.com/public/thanks.html')
             // prevent the form submit from refreshing the page
             event.preventDefault();
         
@@ -142,6 +141,7 @@
                 document.getElementById("result-text").innerText =
                     "An unkown error occured.";
                 });
+                window.location.replace('https://www.jacmgmthi.com/public/thanks.html')
             });
         </script>
     </div>
