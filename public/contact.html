@@ -128,7 +128,7 @@
                 body
             };
         
-            fetch(endpoint, requestOptions)
+            await fetch(endpoint, requestOptions)
                 .then((response) => {
                 if (!response.ok) throw new Error("Error in fetch");
                 return response.json();
@@ -136,9 +136,6 @@
                 .then((response) => {
                 document.getElementById("result-text").innerText =
                     "Email sent successfully!";
-                })
-                .then((response) => {
-                    window.location.replace("/thanks.html");
                 })
                 .catch((error) => {
                 document.getElementById("result-text").innerText =
