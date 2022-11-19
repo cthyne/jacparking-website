@@ -136,9 +136,7 @@
                 .then((response) => {
                 document.getElementById("result-text").innerText =
                     "Email sent successfully!";
-                })
-                .then((response) => {
-                    window.location.replace('/thanks.html')
+                window.location.replace('/thanks.html')
                 })
                 .catch((error) => {
                 document.getElementById("result-text").innerText =
