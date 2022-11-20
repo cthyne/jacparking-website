@@ -135,14 +135,14 @@
                 return response.json();
                 })
                 .then((response) => {
-                    document.getElementById("result-text").innerText =
-                    "Email sent successfully!"
+                    // document.getElementById("result-text").innerText =
+                    // "Email sent successfully!"
+                    window.location.replace("./thanks.html")
                 })
                 .catch((error) => {
                 document.getElementById("result-text").innerText =
                     "An unkown error occured.";
                 })
-                window.location.replace("./thanks.html")
             });
         </script>
     </div>
