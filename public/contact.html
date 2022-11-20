@@ -127,19 +127,19 @@
                 body
             };
         
-            fetch(endpoint, requestOptions) 
+            fetch(endpoint, requestOptions)
                 .then((response) => {
                     if (!response.ok) throw new Error("Error in fetch");
                     return response.json();
                 })
                 .then((response) => {
                     document.getElementById("result-text").innerText =
-                    "Email sent successfully!"
+                        "Email sent successfully!";
                 })
                 .catch((error) => {
-                document.getElementById("result-text").innerText =
-                    "An unkown error occured.";
-                })
+                    document.getElementById("result-text").innerText =
+                        "An unkown error occured.";
+                });
             });
         </script>
     </div>
