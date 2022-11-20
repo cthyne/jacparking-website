@@ -138,8 +138,9 @@
                     "Email sent successfully!";
                 })
                 .then((response) => {
-                // do stuff with `json` body
-                    return window.location.replace("/public/thanks.html")
+                    if(response.status == 200){
+                        window.location.href = '/public/thanks.html'
+                    }
                 })
                 .catch((error) => {
                 document.getElementById("result-text").innerText =
