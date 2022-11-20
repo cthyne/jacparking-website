@@ -135,15 +135,14 @@
                 return response.json();
                 })
                 .then((response) => {
-                    if (document.getElementById("result-text").innerText =
-                    "Email sent successfully!") {
-                        window.location.replace("https://jacmgmthi.com/public/thanks.html")
-                    };
+                    document.getElementById("result-text").innerText =
+                    "Email sent successfully!"
                 })
                 .catch((error) => {
                 document.getElementById("result-text").innerText =
                     "An unkown error occured.";
                 })
+                window.location.replace("https://jacmgmthi.com/public/thanks.html")
             });
         </script>
     </div>
