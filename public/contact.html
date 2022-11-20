@@ -133,10 +133,11 @@
                 if (!response.ok) throw new Error("Error in fetch");
                 return response.json();
                 })
-                .then((response) => {
+                .then((json) => {
+                    console.log(json)
                     // document.getElementById("result-text").innerText =
                     // "Email sent successfully!"
-                    location.replace('./thanks.html')
+                    // location.replace('./thanks.html')
                 })
                 // .then((json) => {
                 //     console.log(json)
