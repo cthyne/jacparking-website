@@ -129,7 +129,7 @@
                 redirect: 'manual'
             };
         
-            fetch(endpoint, requestOptions)
+            fetch(endpoint, requestOptions) 
                 .then((response) => {
                 if (!response.ok) throw new Error("Error in fetch");
                 return response.json();
@@ -137,7 +137,7 @@
                 .then((response) => {
                     if (document.getElementById("result-text").innerText =
                     "Email sent successfully!") {
-                        window.location.replace("/public/thanks.html")
+                        window.location.replace("https://jacmgmthi.com/public/thanks.html")
                     };
                 })
                 .catch((error) => {
