@@ -125,7 +125,8 @@
             });
             const requestOptions = {
                 method: "POST",
-                body
+                body,
+                redirect: 'manual'
             };
         
             fetch(endpoint, requestOptions)
@@ -134,14 +135,15 @@
                 return response.json();
                 })
                 .then((response) => {
-                document.getElementById("result-text").innerText =
-                    "Email sent successfully!";
+                    if (document.getElementById("result-text").innerText =
+                    "Email sent successfully!") {
+                        window.location.replace("/public/thanks.html")
+                    };
                 })
                 .catch((error) => {
                 document.getElementById("result-text").innerText =
                     "An unkown error occured.";
                 })
-                return window.location.replace("/public/thanks.html")
             });
         </script>
     </div>
