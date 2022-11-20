@@ -138,9 +138,7 @@
                     "Email sent successfully!";
                 })
                 .then((response) => {
-                    if(response.status == 200){
-                        window.location.href = '/public/thanks.html'
-                    }
+                    response.redirect('/public/thanks.html')
                 })
                 .catch((error) => {
                 document.getElementById("result-text").innerText =
