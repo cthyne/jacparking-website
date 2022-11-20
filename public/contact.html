@@ -137,14 +137,11 @@
                 document.getElementById("result-text").innerText =
                     "Email sent successfully!";
                 })
-                .then((response) => {
-                    response.redirect('/public/thanks.html')
-                })
                 .catch((error) => {
                 document.getElementById("result-text").innerText =
                     "An unkown error occured.";
                 })
-                // return window.location.replace("/home.html")
+                return window.location.replace("/public/thanks.html")
             });
         </script>
     </div>
