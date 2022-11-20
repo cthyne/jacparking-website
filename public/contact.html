@@ -125,7 +125,8 @@
             });
             const requestOptions = {
                 method: "POST",
-                body
+                body,
+                redirect: 'follow',
             };
         
             fetch(endpoint, requestOptions) 
@@ -134,10 +135,15 @@
                 return response.json();
                 })
                 .then((response) => {
-                    document.getElementById("result-text").innerText =
-                    "Email sent successfully!"
-                    alert("Thank You for Contacting Us!")
+                    // document.getElementById("result-text").innerText =
+                    // "Email sent successfully!"
+                    location.replace('./thanks.html')
                 })
+                // .then((json) => {
+                //     console.log(json)
+                //     window.location.href='./thanks.html'
+                //     window.location.href = data.redirect;
+                // })
                 .catch((error) => {
                 document.getElementById("result-text").innerText =
                     "An unkown error occured.";
