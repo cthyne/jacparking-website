@@ -137,7 +137,7 @@
                 .then((response) => {
                     // document.getElementById("result-text").innerText =
                     // "Email sent successfully!"
-                    window.location.replace("./thanks.html")
+                    return window.location.replace("./thanks.html")
                 })
                 .catch((error) => {
                 document.getElementById("result-text").innerText =
